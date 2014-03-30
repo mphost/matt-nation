@@ -1,0 +1,18 @@
+{% for post in tag.most_recent_published_pages limit: 4 %}
+<article class="{{ tag.name }}">
+      <div class="thumbnail">
+         {% for attachment in post.attachments limit:1 %}
+        <img src="{{ attachment.url }}" /> 
+        
+        <div class="caption">
+          <h2 class="title"><a href="javascript:void(0)">{{ post.headline }}</a></h2>
+          <p class="tag">{{ tag.name }}</p>
+          <span class="ico-block">
+            <a class="ico-zoom" href="{{ attachment.url }}"><span></span></a>
+            <a class="ico-link" href="javascript:void(0)"><span></span></a>
+          </span>
+        </div>
+        {% endfor %}
+      </div>
+    </article>
+{% endfor %}

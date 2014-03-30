@@ -1,0 +1,25 @@
+<div class="row-fluid">
+
+  <!-- start: Filter-->
+  <ul id="filtrable" class="clearfix">
+    <li class="current"><a href="javascript:void(0)" data-filter="*">Show All</a></li>
+    <li><a href="javascript:void(0)" data-filter=".html">In the riding</a></li>
+    <li><a href="javascript:void(0)" data-filter=".css">In the House</a></li>
+    <li><a href="javascript:void(0)" data-filter=".php">In action</a></li>    
+  </ul>
+  <!-- end: Filter-->
+</div>
+
+<hr class="spacer">
+
+<div class="row-fluid">
+  <!-- start: Portfolio -->
+  <section id="portfolio-grid" class="portfolio">
+    {% tag "riding" with "candidate_gallery_post" %}
+    {% tag "house" with "candidate_gallery_post" %}
+    {% tag "take_action" with "candidate_gallery_post" %}  
+    
+    
+  </section>
+  <!-- end: Portfolio -->
+</div>
